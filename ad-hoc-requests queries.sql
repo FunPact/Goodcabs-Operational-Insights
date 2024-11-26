@@ -1,4 +1,4 @@
-/*Business Request 1: City-Level Fare and Trip Summary Report
+/*Business Request 1: City-Level Fare and Trip Summary Report*/
 USE trips_db;
 SELECT 
     dc.city_name,
@@ -13,9 +13,9 @@ JOIN
 ON 
     ft.city_id = dc.city_id
 GROUP BY 
-    dc.city_name;*/
+    dc.city_name;
     
-    /*Business Request 2: Monthly City-Level Trips Target Performance Report
+    /*Business Request 2: Monthly City-Level Trips Target Performance Report*/
     SELECT 
     dc.city_name,
     dd.month_name,
@@ -75,9 +75,9 @@ JOIN
 ON 
     drt.city_id = rpt.city_id
 GROUP BY 
-    rpt.city_name, rpt.total_repeat_passengers;*/
+    rpt.city_name, rpt.total_repeat_passengers;
     
-    /*Business Request 4: Identify Cities with Highest and Lowest Total New Passengers
+    /*Business Request 4: Identify Cities with Highest and Lowest Total New Passengers*/
     WITH city_rankings AS (
     SELECT 
         dc.city_name,
@@ -104,9 +104,9 @@ SELECT
 FROM 
     city_rankings
 WHERE 
-    rank_highest <= 3 OR rank_lowest <= 3;*/
+    rank_highest <= 3 OR rank_lowest <= 3;
     
-/*Business Request 5: Identify Month with Highest Revenue for Each City
+/*Business Request 5: Identify Month with Highest Revenue for Each City*/
 WITH city_revenue AS (
     SELECT 
         dc.city_name,
@@ -145,7 +145,7 @@ FROM
 JOIN 
     max_revenue_per_city mrc
 ON 
-    cr.city_name = mrc.city_name AND cr.monthly_revenue = mrc.max_monthly_revenue;*/
+    cr.city_name = mrc.city_name AND cr.monthly_revenue = mrc.max_monthly_revenue;
     
     /*Business Request 6: Repeat Passenger Rate Analysis*/
     SELECT 
