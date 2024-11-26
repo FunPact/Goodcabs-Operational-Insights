@@ -43,7 +43,7 @@ ON
 GROUP BY 
     dc.city_name, dd.month_name, mt.total_target_trips;*/
     
-    /*Business Request 3: City-Level Repeat Passenger Trip Frequency Report
+    /*Business Request 3: City-Level Repeat Passenger Trip Frequency Report*/
     WITH RepeatPassengerTotals AS (
     SELECT 
         dc.city_name,
